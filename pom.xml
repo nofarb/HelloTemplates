@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>cloudbees.example</groupId>
-	<artifactId>templates_demo</artifactId>
+	<artifactId>helloWorld</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>templates_demo</name>
-	<description>Demo project for Spring Boot</description>
+	<name>helloWorld</name>
+	<description>Demo project for templates</description>
 
 	<properties>
 		<java.version>1.8</java.version>
