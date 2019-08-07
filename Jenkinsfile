@@ -29,15 +29,22 @@ pipeline {
                     }
                       }
             }      
-
-        stage('notify') {
-           steps {
-                        echo "On Branch notify"
+      
+    }
+    
+       post { 
+        failure { 
+            echo "On Post-failue"
                         slackSend channel: 'templates_demo', color: '#439FE0',message: 'This is the message', teamDomain: 'cloudbees', tokenCredentialId: 'Jenkins-slack-integration'
 
-                    }
+              
         }
-       
+           success{
+               echo "On Post-success"
+                        slackSend channel: 'templates_demo', color: '#439FE0',message: 'This is the message', teamDomain: 'cloudbees', tokenCredentialId: 'Jenkins-slack-integration'
+
+              
+           }
     }
 }
 
