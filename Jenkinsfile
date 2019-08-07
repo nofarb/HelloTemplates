@@ -1,6 +1,17 @@
 pipeline {
     agent any
     stages {
+        
+          stage ("Build") {
+
+                steps{
+                    withMaven() {
+                        sh "./mvnw verify"
+                }
+                     sh "ls -lat"
+                            sh "pwd"
+                }
+            }
                 stage ("deploy to Development") {
                     
                       steps {
