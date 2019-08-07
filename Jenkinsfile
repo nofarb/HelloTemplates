@@ -4,6 +4,8 @@ pipeline {
                 stage ("deploy to Development") {
                     
                       steps {
+                          sh "ls -lat"
+                            sh "pwd"
                     withCfCli(
                         apiEndpoint: 'https://api.run.pivotal.io', 
                         cloudFoundryCliVersion: 'cloudfoundry-cli-6.22.1', 
