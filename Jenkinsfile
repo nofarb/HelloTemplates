@@ -1,13 +1,7 @@
 pipeline {
     agent any
     stages {
-        
-            stage ("Build") {
-                    withMaven() {
-                        sh "./mvnw verify"
-                }
-            }
-             stage ("deploy to Development") {
+                stage ("deploy to Development") {
                     withCfCli(
                         apiEndpoint: 'https://api.run.pivotal.io', 
                         cloudFoundryCliVersion: 'cloudfoundry-cli-6.22.1', 
