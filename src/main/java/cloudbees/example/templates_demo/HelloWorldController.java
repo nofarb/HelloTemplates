@@ -14,7 +14,7 @@ public class HelloWorldController {
     }
 
      @GetMapping("/")
-    public String sayHello() {
+    public String sayHelloToALL() {
         return "Hello Java Code Geeks!";
     }
 }
