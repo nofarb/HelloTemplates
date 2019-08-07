@@ -2,6 +2,8 @@ pipeline {
     agent any
     stages {
                 stage ("deploy to Development") {
+                    
+                      steps {
                     withCfCli(
                         apiEndpoint: 'https://api.run.pivotal.io', 
                         cloudFoundryCliVersion: 'cloudfoundry-cli-6.22.1', 
@@ -12,6 +14,7 @@ pipeline {
                         cf push hello-world -p target/*.jar
                         """
                     }
+                      }
             }      
 
         stage('notify') {
