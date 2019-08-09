@@ -23,7 +23,7 @@ public class HelloWorldController {
     
     
     public String getCurrentDateTime() {
-            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+            DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
             // get current date time with Date()
             Date date = new Date();
             return dateFormat.format(date);
