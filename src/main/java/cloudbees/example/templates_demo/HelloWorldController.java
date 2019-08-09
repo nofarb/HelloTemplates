@@ -13,20 +13,22 @@ public class HelloWorldController {
 
     @GetMapping("/hello")
     public String sayHello() {
-        return "Hello Java Code Geeks!" + "Time is :" + getDate;
+        return "Hello Java Code Geeks!" + "Time is :" + getDate();
     }
 
      @GetMapping("/")
     public String sayHelloToALL() {
-        return "Hello Java Code Geeks!" + "Time is :" + getDate;
+        return "Hello Java Code Geeks!" + "Time is :" + getDate();
     }
     
     
-    Public String getDate(){
-        
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-        Date date = new Date();
-        return dateFormat.format(date); //2013/10/15 16:16:39
-
+    public String getCurrentDateTime() {
+            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+            // get current date time with Date()
+            Date date = new Date();
+            return dateFormat.format(date);
 
     }
+
+
+  }
