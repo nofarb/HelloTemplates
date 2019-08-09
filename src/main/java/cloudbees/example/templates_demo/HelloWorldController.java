@@ -13,12 +13,12 @@ public class HelloWorldController {
 
     @GetMapping("/hello")
     public String sayHello() {
-        return "Hello Java Code Geeks!" + "Time is :" + getDate();
+        return "Hello Java Code Geeks!" + "Time is :" + getCurrentDateTime();
     }
 
      @GetMapping("/")
     public String sayHelloToALL() {
-        return "Hello Java Code Geeks!" + "Time is :" + getDate();
+        return "Hello Java Code Geeks!" + "Time is :" + getCurrentDateTime();
     }
     
     
